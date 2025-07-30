@@ -1,0 +1,569 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #222;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo h1 b {
+    color: #ffcc00; 
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distribute space between content and image */
+    padding: 50px;
+    background-color: #222;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for the main content block */
+}
+
+.hero-content {
+    max-width: 45%; /* Adjust width to give more space */
+    padding-right: 20px; /* Reduce padding as space is handled by justify-content */
+    z-index: 1;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    margin: 0;
+    line-height: 1.1;
+    color: #fff; /* Ensure h1 defaults to white */
+}
+
+.hero-content h1 .highlight-word {
+    color: #ffcc00; /* Yellow color for "Get" */
+}
+
+/* Remove or override the previous rule for :nth-child(2) */
+/* .hero-content h1:nth-child(2) {
+    color: #ffcc00;
+} */
+
+.hero-content p {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.get-started-button {
+    background-color: #222;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for the button */
+}
+
+.get-started-button:hover {
+    background-color: #ffcc00;
+    color: #222;
+}
+
+.get-started-button span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.hero-image {
+    height: 90%; /* Adjust as needed */
+    width: 45%; /* Adjust width to give more space */
+    display: flex; /* To center the image if it's smaller */
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    height: 100%;
+    width: 100%; /* Make image fill its container */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for the image */
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.about-page-content {
+    padding: 50px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #222;
+    border-radius: 15px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Linda's Story Section */
+.linda-story-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color: #222;
+    border-radius: 15px;
+    padding: 50px;
+    margin: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.linda-image img {
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.linda-story-content {
+    max-width: 600px;
+    color: #fff;
+}
+
+.linda-story-content h3 {
+    font-size: 32px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.linda-story-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.linda-quote {
+    font-style: italic;
+    font-weight: bold;
+    color: #ffcc00;
+    margin-top: 20px;
+    border-left: 5px solid #ffcc00;
+    padding-left: 15px;
+}
+
+/* Exercise Search Section */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+#exerciseSearchInput {
+    padding: 15px;
+    width: 60%;
+    max-width: 500px;
+    border: 2px solid #ffcc00;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+}
+
+#exerciseSearchInput::placeholder {
+    color: #aaa;
+}
+
+.get-started-button, .clear-button {
+    background-color: #ffcc00;
+    color: #222;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.get-started-button:hover, .clear-button:hover {
+    background-color: #e6b800;
+}
+
+.clear-button {
+    background-color: #555;
+    color: #fff;
+}
+
+.clear-button:hover {
+    background-color: #777;
+}
+
+.search-results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.exercise-result-box {
+    background-color: #333;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.exercise-result-box h4 {
+    color: #ffcc00;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.exercise-result-box p {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.exercise-result-box strong {
+    color: #fff;
+}
+
+/* New Styles for Unlock Your Fit Life sections */
+.unlock-potential-section,
+.goals-section,
+.back-to-browse,
+.exercise-search-section,
+.story-section { /* Moved .story-section here from common block */
+    background-color: #222;
+    border-radius: 15px;
+    padding: 50px;
+    margin-bottom: 30px; /* Adjusted margin for consistent spacing between sections */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+}
+
+.about-page-content section:first-child {
+    margin-top: 0; /* Remove top margin for the first section in main */
+}
+
+.unlock-potential-section h2,
+.goals-section h2,
+.exercise-search-section h2 {
+    font-size: 36px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.unlock-potential-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+.unlock-button {
+    background-color: #ffcc00;
+    color: #222;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.unlock-button:hover {
+    background-color: #e6b800;
+}
+
+.story-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.story-section .story-image-container {
+    /* Existing story-image styles for responsive width */
+    max-width: 350px;
+    height: auto;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.story-section .story-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.story-section .story-content {
+    max-width: 600px;
+    color: #fff;
+    text-align: left; /* Ensure text alignment for flex item */
+}
+
+.story-section h2 {
+    font-size: 32px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.story-image {
+    max-width: 350px; /* Adjusted to match Linda's image size */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0; /* Remove redundant margin from common style */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.story-section p {
+    font-size: 16px; /* Adjusted to match Linda's story p font-size */
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ccc;
+    text-align: left; /* Ensure text is left aligned within flex */
+}
+
+.story-section blockquote {
+    font-style: italic;
+    font-weight: bold;
+    color: #ffcc00;
+    margin: 20px 0;
+    border-left: 5px solid #ffcc00;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.goals-section .goal-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.goal-box {
+    background-color: #333;
+    border: 2px solid #ffcc00;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 150px; /* Ensure consistent height */
+}
+
+.goal-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+}
+
+.goal-box p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+/* Styles for hidden elements */
+.hidden {
+    display: none;
+}
+
+#welcomeNote,
+#workoutPlan,
+#nutritionAdvice {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #333;
+    border: 1px solid #ffcc00;
+    border-radius: 10px;
+    text-align: left;
+}
+
+#welcomeNote h3 {
+    color: #ffcc00;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+#workoutPlan h3,
+#nutritionAdvice h3 {
+    color: #ffcc00;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#workoutPlan pre,
+#nutritionAdvice pre {
+    background-color: #1a1a1a;
+    color: #00ff00; /* Green text for code/JSON */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* Wrap long lines */
+    word-wrap: break-word; /* Break words to prevent overflow */
+}
+
+.back-to-browse p {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.back-to-browse a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-browse a:hover {
+    text-decoration: underline;
+} 
+
+/* New Styles for Contact Us page */
+.contact-section {
+    background-color: #222;
+    border-radius: 15px;
+    padding: 50px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: #fff;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    color: #ffcc00;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info strong {
+    color: #fff;
+}
+
+.contact-info a,
+.social-links a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+    transition: text-decoration 0.3s;
+}
+
+.contact-info a:hover,
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    background-color: #333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #ffcc00;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffcc00;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #ffcc00;
+    color: #222;
+} 
