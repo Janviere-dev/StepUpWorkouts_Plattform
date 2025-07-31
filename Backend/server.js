@@ -3,7 +3,7 @@ const express = require('express');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 5000; // Use environment variable or default to 5000
+const PORT = process.env.PORT || 8080; // Use environment variable or default to 5000
 
 // Enable CORS for all origins (you can restrict this to your frontend's origin in production)
 app.use(cors());

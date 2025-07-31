@@ -1,6 +1,6 @@
 const CORS_PROXY = ''; 
-const SEARCH_URL = "http://localhost:5000/api/exercises"; // my backend endpoint for searching exercises
-const DETAIL_URL = "http://localhost:5000/api/exercises/"; // my backend endpoint for detailed exercise info
+const SEARCH_URL = "http://localhost:8080/api/exercises"; // my backend endpoint for searching exercises
+const DETAIL_URL = "http://localhost:8080/api/exercises/"; // my backend endpoint for detailed exercise info
 
 const exerciseSearchInput = document.getElementById('exerciseSearchInput');
 const clearSearchBtn = document.getElementById('clearSearchBtn');
