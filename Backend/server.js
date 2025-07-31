@@ -1,6 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 8080; // Use environment variable or default to 5000
@@ -10,6 +11,15 @@ app.use(cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+
+// Serve static files like HTML, CSS, JS from 'frontend' folder
+app.use(express.static(path.join(__dirname, 'Frontend')));
+
+// Optional route for '/'
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'Frontend', 'index.html'));
+});
+
 
 // Proxy endpoint for the exercise API
 app.get('/api/exercises', async (req, res) => {
