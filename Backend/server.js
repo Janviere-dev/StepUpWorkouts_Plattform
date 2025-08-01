@@ -23,6 +23,42 @@ app.listen(PORT, () => {
   console.log(`Backend server running on port ${PORT}`);
 });
 
+Workout Plan (POST)
+app.post('/api/generateWorkoutPlan', (req, res) => {
+  res.json({ result: "Sample workout plan generated!" });
+});
+
+ Nutrition Advice (POST)
+app.post('/api/nutritionAdvice', (req, res) => {
+  const input = req.body;
+
+  nutrition logic
+  const advice = {
+    goal: input.goal,
+    calories_per_day: 2200,
+    macronutrients: {
+      carbohydrates: '300g',
+      proteins: '120g',
+      fats: '70g'
+    },
+    meal_suggestions: [
+      {
+        meal: 'Breakfast',
+        suggestions: [
+          { name: 'Oatmeal with peanut butter', calories: 400, ingredients: ['Oats', 'Peanut butter', 'Banana'] }
+        ]
+      }
+    ]
+  };
+
+  res.json({ result: advice });
+});
+
+//Start the server
+app.listen(8080, '0.0.0.0', () => {
+  console.log('Server running at http://localhost:8080');
+});
+
 
 // Proxy endpoint for the exercise API
 app.get('/api/exercises', async (req, res) => {
