@@ -132,25 +132,41 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function displayWorkoutPlan(plan) {
-        let html = `<h3>Workout Plan for ${plan.goal} (${plan.total_weeks} Weeks)</h3>`;
-        html += `<p><strong>Fitness Level:</strong> ${plan.fitness_level}</p>`;
-        html += `<p><strong>Schedule:</strong> ${plan.schedule.days_per_week} days/week, ${plan.schedule.session_duration} minutes/session</p>`;
-        
-        plan.exercises.forEach(dayPlan => {
-            html += `<h4>${dayPlan.day}</h4>`;
-            if (dayPlan.exercises && dayPlan.exercises.length > 0) {
-                html += `<ul>`;
-                dayPlan.exercises.forEach(exercise => {
-                    html += `<li><strong>${exercise.name}</strong>: ${exercise.duration} | Reps: ${exercise.repetitions} | Sets: ${exercise.sets} | Equipment: ${exercise.equipment}</li>`;
-                });
-                html += `</ul>`;
-            } else {
-                html += `<p>No exercises planned for this day.</p>`;
-            }
-        });
-        workoutPlanDiv.innerHTML = html;
+   function displayWorkoutPlan(plan) {
+    if (
+        !plan ||
+        typeof plan.goal === 'undefined' ||
+        typeof plan.total_weeks === 'undefined' ||
+        !plan.fitness_level ||
+        !plan.schedule ||
+        typeof plan.schedule.days_per_week === 'undefined' ||
+        typeof plan.schedule.session_duration === 'undefined' ||
+        !Array.isArray(plan.exercises)
+    ) {
+        console.error("Invalid or incomplete workout plan:", plan);
+        workoutPlanDiv.innerHTML = `<p>Sorry, the workout plan couldn't be loaded properly.</p>`;
+        return;
     }
+
+    let html = `<h3>Workout Plan for ${plan.goal} (${plan.total_weeks} Weeks)</h3>`;
+    html += `<p><strong>Fitness Level:</strong> ${plan.fitness_level}</p>`;
+    html += `<p><strong>Schedule:</strong> ${plan.schedule.days_per_week} days/week, ${plan.schedule.session_duration} minutes/session</p>`;
+
+    plan.exercises.forEach(dayPlan => {
+        html += `<h4>${dayPlan.day}</h4>`;
+        if (dayPlan.exercises && dayPlan.exercises.length > 0) {
+            html += `<ul>`;
+            dayPlan.exercises.forEach(exercise => {
+                html += `<li><strong>${exercise.name}</strong>: ${exercise.duration} | Reps: ${exercise.repetitions} | Sets: ${exercise.sets} | Equipment: ${exercise.equipment}</li>`;
+            });
+            html += `</ul>`;
+        } else {
+            html += `<p>No exercises planned for this day.</p>`;
+        }
+    });
+
+    workoutPlanDiv.innerHTML = html;
+}
 
     function displayNutritionAdvice(advice) {
         let html = `<h3>Nutrition Advice for ${advice.goal}</h3>`;
