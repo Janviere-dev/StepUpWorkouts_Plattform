@@ -32,7 +32,7 @@ app.post('/api/generateWorkoutPlan', (req, res) => {
 app.post('/api/nutritionAdvice', (req, res) => {
   const input = req.body;
 
-  nutrition logic
+  // nutrition logic
   const advice = {
     goal: input.goal,
     calories_per_day: 2200,
