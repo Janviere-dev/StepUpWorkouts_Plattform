@@ -23,12 +23,12 @@ app.listen(PORT, () => {
   console.log(`Backend server running on port ${PORT}`);
 });
 
-Workout Plan (POST)
+// Workout Plan (POST)
 app.post('/api/generateWorkoutPlan', (req, res) => {
   res.json({ result: "Sample workout plan generated!" });
 });
 
- Nutrition Advice (POST)
+ // Nutrition Advice (POST)
 app.post('/api/nutritionAdvice', (req, res) => {
   const input = req.body;
 
