@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchWorkoutPlan(goal) {
         workoutPlanDiv.innerHTML = '<p>Generating workout plan...</p>';
         try {
-            const response = await fetch('http://localhost:5000/api/generateWorkoutPlan', {
+            const response = await fetch('http://localhost:8080/api/generateWorkoutPlan', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function fetchNutritionAdvice(goal) {
         nutritionAdviceDiv.innerHTML = '<p>Getting nutrition advice...</p>';
         try {
-            const response = await fetch('http://localhost:5000/api/nutritionAdvice', {
+            const response = await fetch('http://localhost:8080/api/nutritionAdvice', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
