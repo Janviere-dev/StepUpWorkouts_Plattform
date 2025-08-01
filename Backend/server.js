@@ -25,7 +25,30 @@ app.listen(PORT, () => {
 
 // Workout Plan (POST)
 app.post('/api/generateWorkoutPlan', (req, res) => {
-  res.json({ result: "Sample workout plan generated!" });
+  res.json({
+  result: {
+    goal: "Build muscle",
+    total_weeks: 4,
+    fitness_level: "Beginner",
+    schedule: {
+      days_per_week: 3,
+      session_duration: 45
+    },
+    exercises: [
+      {
+        day: "Day 1",
+        exercises: [
+          {
+            name: "Push-ups",
+            duration: "10 mins",
+            repetitions: 15,
+            sets: 3,
+            equipment: "None"
+          }
+        ]
+      }
+    ]
+  }
 });
 
  // Nutrition Advice (POST)
