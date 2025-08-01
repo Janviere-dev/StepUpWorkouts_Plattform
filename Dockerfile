@@ -1,4 +1,4 @@
-e a Node.js Long Term Support (LTS) image as the base
+#  Use a Node.js Long Term Support (LTS) image as the base
 FROM node:18-alpine
 
 # Set working directory inside the container
