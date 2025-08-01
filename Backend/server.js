@@ -12,17 +12,17 @@ app.use(cors());
 // Middleware to parse JSON bodies
 app.use(express.json());
 
-// Serve static files like HTML, CSS, JS from 'frontend' folder
-app.use(express.static(path.join(__dirname, 'Frontend')));
+// Serve static files from ../Frontend
+app.use(express.static(path.join(__dirname, '..', 'Frontend')));
 
-// Optional route for '/'
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'Frontend', 'index.html'));
+  res.sendFile(path.join(__dirname, '..', 'Frontend', 'index.html'));
 });
 
 app.listen(PORT, () => {
   console.log(`Backend server running on port ${PORT}`);
 });
+
 
 // Proxy endpoint for the exercise API
 app.get('/api/exercises', async (req, res) => {

@@ -1,9 +1,10 @@
 # Use a Node.js Long Term Support (LTS) image as the base
 FROM node:18-alpine
 
-# Set the working directory inside the container
+# Set working directory inside the container
 WORKDIR /app
 
+<<<<<<< HEAD
 # Copy package.json from the Backend directory to the working directory
 # This allows caching of dependencies
 COPY ./Backend ./Backend
@@ -18,4 +19,17 @@ RUN cd Backend && npm install
 EXPOSE 8080
 
 # Define the command to run your application (starting server.js from the Backend directory)
+=======
+# Copy both folders into the container
+COPY Backend ./Backend
+COPY Frontend ./Frontend
+
+# Install backend dependencies
+RUN cd Backend && npm install
+
+# Expose the desired port
+EXPOSE 8080
+
+# Start the server
+>>>>>>> 509116237053d9c2d04d26f904fb4ffa1c6e9524
 CMD ["node", "Backend/server.js"]
