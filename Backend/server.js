@@ -25,9 +25,10 @@ app.listen(PORT, () => {
 
 // Workout Plan (POST)
 app.post('/api/generateWorkoutPlan', (req, res) => {
-  res.json({
-  result: {
-    goal: "Build muscle",
+  const goal = req.body.goal;
+
+  const plan = {
+    goal,
     total_weeks: 4,
     fitness_level: "Beginner",
     schedule: {
@@ -48,8 +49,11 @@ app.post('/api/generateWorkoutPlan', (req, res) => {
         ]
       }
     ]
-  }
+  };
+
+  res.json({ result: plan });
 });
+
 
  // Nutrition Advice (POST)
 app.post('/api/nutritionAdvice', (req, res) => {
