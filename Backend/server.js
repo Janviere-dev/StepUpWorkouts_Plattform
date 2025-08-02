@@ -4,7 +4,7 @@ const cors = require('cors');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8080; // Use environment variable or default to 5000
+const PORT = process.env.PORT || 8000; // Use environment variable or default to 8000
 
 // Enable CORS for all origins (you can restrict this to your frontend's origin in production)
 app.use(cors());
@@ -82,7 +82,7 @@ app.post('/api/nutritionAdvice', (req, res) => {
 });
 
 //Start the server
-app.listen(8080, '0.0.0.0', () => {
+app.listen(8000, '0.0.0.0', () => {
   console.log('Server running at http://localhost:8080');
 });
 
