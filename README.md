@@ -37,7 +37,7 @@ node server.js
 4. Launch the Frontend
 Open Frontend/index.html in VS Code and use the Live Server extension to preview the site.
 
-🌐 Deployment to Web Servers
+ Deployment to Web Servers
 This project uses the Web Infrastructure Lab to simulate a multi-server environment with Docker containers.
 
 1. Set Up the Lab Environment
@@ -74,7 +74,7 @@ scp -r StepUpWorkouts_Plattform ubuntu@localhost:/var/www -P 2211  # web-01
 scp -r StepUpWorkouts_Plattform ubuntu@localhost:/var/www -P 2212  # web-02
 Note: -P specifies the port. Adjust if needed.
 
-🐳 Dockerize the Backend
+ Dockerize the Backend
 Inside StepUpWorkouts_Plattform, create a Dockerfile:
 
 Dockerfile
@@ -90,7 +90,7 @@ Build and run:
 bash
 docker build -t <dockerhub-username>/<app-name>:v1 .
 docker run -p 8080:8080 <dockerhub-username>/<app-name>:v1
-🔧 Nginx Configuration (web-01 & web-02)
+ Nginx Configuration (web-01 & web-02)
 Edit /etc/nginx/sites-available/default:
 
 nginx
@@ -128,7 +128,7 @@ sudo nginx -s reload
 curl http://localhost:8080
 Repeat on web-02.
 
-📡 APIs Used
+ APIs Used
 1. ExerciseDB API
 Over 1,300 exercises categorized by body part, equipment, and target muscle.
 
@@ -139,9 +139,9 @@ Generates custom workout plans based on user goals.
 
 Uses AI to optimize training efficiency.
 
-🙏 Credits to the API developers for providing powerful tools that made this platform possible.
+ Credits to the API developers for providing powerful tools that made this platform possible.
 
-⚔️ Challenges & Lessons Learned
+ Challenges & Lessons Learned
 API Limitations Initially used an API with limited requests. Switched to one with higher quota and better documentation.
 
 Misaligned Endpoints Misread API docs and had to redesign parts of the project to match actual data structure.
@@ -150,11 +150,11 @@ Deployment Struggles Faced issues with backend visibility across containers. Sol
 
 Traffic Routing Requests weren’t reaching web-01/web-02. Learned to configure Nginx and HAProxy properly for load balancing.
 
-💡 Final Thoughts
+ Final Thoughts
 This project is more than just code—it's a journey of resilience, learning, and empowerment. Every bug fixed and every container deployed is a step toward making fitness accessible and inspiring for all.
 
-📬 Contact
-For questions, feedback, or collaboration ideas, feel free to reach out via GitHub or email.
+ Contact
+For questions, feedback, or collaboration ideas, feel free to reach out via GitHub or j.munezero@student.com
 
 
 ---
