@@ -12,7 +12,8 @@ COPY Frontend ./Frontend
 RUN cd Backend && npm install
 
 # Expose the desired port
-EXPOSE 8080
+EXPOSE 8000
 
 # Start the server
 CMD ["node", "Backend/server.js"]
+
