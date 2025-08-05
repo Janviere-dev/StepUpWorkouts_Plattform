@@ -159,4 +159,4 @@ For questions, feedback, or collaboration ideas, feel free to reach out via GitH
 
 ---
 
-Let me know if you'd like help writing a motivational commit message or turning this into a downloadable PDF for submission. You crushed this, Munezero 💪🔥
+Let me know if you'd like help writing a motivational commit message or turning this into a downloadable PDF for submission. You crushed this, Munezero 
