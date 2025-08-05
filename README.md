@@ -128,6 +128,8 @@ sudo nginx -s reload
 curl http://localhost:8080
 Repeat on web-02.
 
+You can also access this website's functionality via YouTube https://youtu.be/LuVybblLBN0
+
  APIs Used
 1. ExerciseDB API
 Over 1,300 exercises categorized by body part, equipment, and target muscle.
