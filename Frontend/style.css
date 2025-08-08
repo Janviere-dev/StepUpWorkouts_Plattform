@@ -567,3 +567,255 @@ footer {
     background-color: #ffcc00;
     color: #222;
 } 
+
+/* Replace the workout form and plan styling in your style.css with this */
+
+.workout-form {
+    background: #222; /* Dark background to match site */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    border: 2px solid #ffcc00; /* Yellow border */
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff; /* White text */
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ffcc00; /* Yellow border */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #ffcc00; /* Keep yellow focus */
+    box-shadow: 0 0 0 2px rgba(255, 204, 0, 0.25); /* Yellow glow */
+}
+
+.generate-plan-button {
+    background-color: #ffcc00; /* Yellow background */
+    color: #222; /* Dark text */
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.generate-plan-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Workout Plan Results Styling */
+.plan-summary, .nutrition-summary {
+    background: #333; /* Dark background */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #ffcc00; /* Yellow accent */
+    color: #fff; /* White text */
+}
+
+.plan-summary p, .nutrition-summary p {
+    color: #fff; /* White text */
+    margin-bottom: 8px;
+}
+
+.plan-summary strong, .nutrition-summary strong {
+    color: #ffcc00; /* Yellow for emphasis */
+}
+
+.day-plan {
+    background: #222; /* Dark background */
+    margin: 15px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffcc00; /* Yellow border */
+}
+
+.day-plan h4 {
+    color: #ffcc00; /* Yellow headings */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffcc00; /* Yellow underline */
+    padding-bottom: 5px;
+}
+
+.exercise-list {
+    list-style: none;
+    padding: 0;
+}
+
+.exercise-item {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    border-left: 3px solid #ffcc00; /* Yellow accent */
+}
+
+.exercise-item strong {
+    color: #ffcc00; /* Yellow for exercise names */
+}
+
+/* Nutrition Advice Styling */
+.meal-section {
+    margin: 20px 0;
+    background: #222; /* Dark background */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffcc00; /* Yellow border */
+}
+
+.meal-section h5 {
+    color: #ffcc00; /* Yellow meal headings */
+    margin-bottom: 10px;
+}
+
+.meal-list {
+    list-style: none;
+    padding: 0;
+}
+
+.meal-item {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    margin: 8px 0;
+    padding: 12px;
+    border-radius: 5px;
+    border-left: 3px solid #ffcc00; /* Yellow accent */
+}
+
+.meal-item strong {
+    color: #ffcc00; /* Yellow for meal names */
+}
+
+.macro-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.macro-list li {
+    background: #333; /* Dark background */
+    color: #fff; /* White text */
+    padding: 8px 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffcc00; /* Yellow border */
+}
+
+/* Update the existing workout/nutrition section containers */
+#workoutPlan,
+#nutritionAdvice {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #333; /* Keep dark background */
+    border: 2px solid #ffcc00; /* Make border more prominent */
+    border-radius: 10px;
+    text-align: left;
+    color: #fff; /* White text */
+}
+
+#workoutPlan h3,
+#nutritionAdvice h3 {
+    color: #ffcc00; /* Yellow headings */
+    font-size: 24px; /* Make headings larger */
+    margin-bottom: 15px;
+    text-align: center; /* Center the main headings */
+}
+
+/* Style the generate buttons in the initial state */
+.generate-workout-button,
+.get-nutrition-button {
+    background-color: #ffcc00; /* Yellow background */
+    color: #222; /* Dark text */
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.generate-workout-button:hover,
+.get-nutrition-button:hover {
+    background-color: #e6b800; /* Darker yellow on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Error message styling */
+#workoutPlan p,
+#nutritionAdvice p {
+    color: #fff; /* White text for loading messages */
+}
+
+/* Try Again button styling */
+button[onclick="location.reload()"] {
+    background-color: #ffcc00;
+    color: #222;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button[onclick="location.reload()"]:hover {
+    background-color: #e6b800;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .workout-form {
+        padding: 15px;
+        margin: 15px 0;
+    }
+    
+    .macro-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .day-plan,
+    .meal-section {
+        margin: 10px 0;
+        padding: 12px;
+    }
+    
+    #workoutPlan,
+    #nutritionAdvice {
+        padding: 20px;
+        margin-top: 20px;
+    }
+}
