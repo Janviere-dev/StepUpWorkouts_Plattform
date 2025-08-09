@@ -179,7 +179,7 @@ sudo nginx -s reload
 ##  Demo
 
 Experience the platform in action:  
-**YouTube:** [StepUpWorkouts Demo](https://youtu.be/LuVybblLBN0)
+**YouTube:** [StepUpWorkouts Demo](https://youtu.be/H77vntSBHIg)
 
 ---
 
@@ -188,12 +188,12 @@ Experience the platform in action:
 ### 1. ExerciseDB API
 - Over 1300 exercises categorized by body part, equipment, and target muscle.
 - Ideal for building personalized workout flows.
-- API Docs: [https://exercisedb.io](https://exercisedb.io)
+- API Docs: [exercisedb](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)
 
 ### 2. AI Workout Planner API
 - Generates custom workout plans based on user goals.
 - Uses AI to optimize training efficiency.
-- API Docs: [https://rapidapi.com/ajith/api/ai-workout-planner](https://rapidapi.com/ajith/api/ai-workout-planner)
+- API Docs: [ai-workout-planner](https://rapidapi.com/ltdbilgisam/api/ai-workout-planner-exercise-fitness-nutrition-guide)
 
 ##  Credits
 
